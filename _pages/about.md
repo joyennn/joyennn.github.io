@@ -12,10 +12,13 @@ Currently, I am a Ph.D. candidate in English linguistics at Sungkyunkwan Univers
 
 Education
 ------
-2022.02 - current : Ph.D. candidate in English linguistics @ Sungkyunkwan University  
+**2022.02 - current**  
+Ph.D. candidate in English linguistics, Sungkyunkwan University  
   
-2019.09 - 2022.02 : M.A. in English language translation @ Sungkyunkwan University  
+**2019.09 - 2022.02**  
+M.A. in English language translation, Sungkyunkwan University  
   
-2009.03 - 2015.02 : B.S. in Hotel mangagement @ Sejong University  
+**2009.03 - 2015.02**  
+B.S. in Hotel mangagement, Sejong University  
 
 

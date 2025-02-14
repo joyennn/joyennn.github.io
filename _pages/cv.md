@@ -9,8 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
-Last updated on December 8th, 2024
+Last updated on February 14th, 2025
 
-<iframe src="https://joyennn.github.io/files/resume_public_241208.pdf" width="70%" height="600px">
+<iframe src="https://joyennn.github.io/files/resume_public_250214.pdf" width="70%" height="600px">
 </iframe>
 

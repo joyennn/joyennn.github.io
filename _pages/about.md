@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Currently, I am a Ph.D. candidate in English linguistics at Sungkyunkwan University, focusing on the interfaces of syntax, semantics, and pragmatics. My research explores how AI language models process and generate language in comparison to how humans comprehend and produce it; how effectively human users can engage with AI language models. In my research, I employ experimental methodologies, including computational and corpus analysis, to investigate linguistic phenomena and their applications in natural language processing.
+Currently, I am a Ph.D. candidate in English linguistics at Sungkyunkwan University, focusing on the interface of syntax, semantics, and pragmatics. My research explores how AI language models process and generate language in comparison to how humans comprehend and produce it; how effectively human users can engage with AI language models. In my research, I employ experimental methodologies, including computational and corpus analysis, to investigate linguistic phenomena and their applications in natural language processing.
 
 
 Education

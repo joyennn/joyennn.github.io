@@ -92,13 +92,25 @@
       font-size: 0.9em;
       color: #555;
     }
+
+    .icon-link {
+  font-size: 1.6em;
+  color: #333;            /* 기본: 검정색 */
+  margin-right: 0.6em;
+  transition: color 0.2s ease;
+}
+
+.icon-link:hover {
+  color: #2980b9;         /* hover 시 파란색 */
+}
+
   </style>
 </head>
 <body>
   <header>
     <img src="profile1.jpeg" alt="Your profile photo">
     <h1>Ye-eun Cho</h1>
-    <p>PhD Candidate in English Linguistics | AI & Language | <a href="mailto:joyenn@skku.edu" style="color: #f0f0f0;">joyenn@skku.edu</a></p>
+    <p>PhD Candidate in English Linguistics | AI & Language 
   </header>
 
   <nav>
@@ -143,19 +155,23 @@ In addition, I actively engage in interdisciplinary research by applying natural
   </ul>
 </section>
 
-  <section id="links">
+<section id="links">
   <h2>Links</h2>
   <p>
-    <a href="mailto:joyenn@skku.edu">
-      <i class="fas fa-envelope"></i> joyenn@skku.edu
+    <a href="mailto:joyenn@skku.edu" class="icon-link">
+      <i class="fas fa-envelope"></i>
     </a>
-    <br>
-    <a href="https://www.linkedin.com/in/joyenn" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-linkedin"></i> LinkedIn
+
+    <a href="https://www.linkedin.com/in/yourprofile" 
+       target="_blank" rel="noopener noreferrer" 
+       class="icon-link">
+      <i class="fab fa-linkedin"></i>
     </a>
-  <br>
-    <a href="https://scholar.google.com/citations?user=YOURID" target="_blank" rel="noopener noreferrer">
-      <i class="fas fa-graduation-cap"></i> Google Scholar
+
+    <a href="https://scholar.google.com/citations?user=YOURID" 
+       target="_blank" rel="noopener noreferrer" 
+       class="icon-link">
+      <i class="fas fa-graduation-cap"></i>
     </a>
   </p>
 </section>

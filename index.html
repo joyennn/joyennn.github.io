@@ -93,6 +93,15 @@
       color: #555;
     }
 
+  a.link {
+  color: #333 !important;     /* 검정색 */
+  text-decoration: underline; /* 밑줄 */
+}
+a.link:hover {
+  color: #2980b9 !important;  /* hover 시 파란색 (선택사항) */
+}
+
+
     .icon-link {
   font-size: 1.6em;
   color: #333;            /* 기본: 검정색 */
@@ -123,7 +132,11 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-I am a PhD candidate in English Linguistics at Sungkyunkwan University, advised by <a href="https://sites.google.com/view/hanjung-lee" target="_blank" rel="noopener noreferrer">Prof. Hanjung Lee</a>, in the Language and Cognition Lab.
+I am a PhD candidate in English Linguistics at Sungkyunkwan University, advised by <a href="https://sites.google.com/view/hanjung-lee" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="link">
+   Prof. Hanjung Lee</a>,  in the Language and Cognition Lab.
 <br><br>
 My research focuses on how AI language models process language in comparison to humans, with the dual goal of developing more human-like models and achieving a deeper understanding of human language use. From this perspective, I approach pragmatic phenomena through computational modeling and corpus-based analysis.
 <br><br>

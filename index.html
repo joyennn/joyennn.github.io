@@ -1,190 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ye-eun Cho</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-    }
-
-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 1.5em 1em;
-  text-align: center;
-}
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      font-size: 1.1em;
-      margin-top: 0.5em;
-    }
-
-    nav {
-      background-color: #34495e;
-      padding: 0.8em 0;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1.2em;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3em;
-      margin-top: 2em;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5em;
-    }
-
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2em 0;
-      background-color: #ecf0f1;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-  a.link {
-  color: #333 !important;     /* 검정색 */
-  text-decoration: underline; /* 밑줄 */
-}
-a.link:hover {
-  color: #2980b9 !important;  /* hover 시 파란색 (선택사항) */
-}
-
-
-    .icon-link {
-  font-size: 1.6em;
-  color: #333;            /* 기본: 검정색 */
-  margin-right: 0.6em;
-  transition: color 0.2s ease;
-}
-
-.icon-link:hover {
-  color: #2980b9;         /* hover 시 파란색 */
-}
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ye-eun Cho — Postdoctoral Researcher at Chungbuk National University. Research in linguistics, natural language processing, and human–AI interaction.">
+  <meta name="theme-color" content="#f8f7f3">
+  <title>Ye-eun Cho | About</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-  <header>
-    <h1>Ye-eun Cho</h1>
-    <p>Postdoctoral Researcher at CBNU</p>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <div class="identity"><h1>Ye-eun Cho</h1><p>Postdoctoral Researcher at CBNU</p></div>
+    <nav aria-label="Main navigation"><a href="index.html" aria-current="page">About</a><a href="research.html">Research</a><a href="tools.html">Tools</a><a href="cv.html">CV</a></nav>
   </header>
+  <main id="main" class="wrap">
 
-  <nav>
-    <a href="index.html">About</a>
-    <a href="research.html">Research</a>
-    <a href="tools.html">Tools</a>
-    <a href="cv.html">CV</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-
-I am a Postdoctoral Researcher with the BK21 FOUR Project Team, 
+    <section id="about" class="section-grid"><div class="section-label"><h2>About Me</h2></div><div class="prose"><p>I am a Postdoctoral Researcher with the BK21 FOUR Project Team,
 <a href="https://engbk21.cbnu.ac.kr/"
-     target="_blank" 
-   rel="noopener noreferrer" 
-   class="link">Comparison and Convergence : Multi-conTEXT</a>, in the Department of English Language and Literature at Chungbuk National University (CBNU). 
+     target="_blank"
+   rel="noopener noreferrer"
+   class="link">Comparison and Convergence : Multi-conTEXT</a>, in the Department of English Language and Literature at Chungbuk National University (CBNU).
 I received my Ph.D. in English Linguistics from Sungkyunkwan University (SKKU),
-advised by <a href="https://sites.google.com/view/hanjung-lee" 
-   target="_blank" 
-   rel="noopener noreferrer" 
+advised by <a href="https://sites.google.com/view/hanjung-lee"
+   target="_blank"
+   rel="noopener noreferrer"
    class="link">
-   Prof. Hanjung Lee</a>,  in the Language and Cognition Lab.
-<br><br>
-My research lies at the intersection of linguistics and NLP. 
-By focusing on how AI language models process language in comparison to humans, I aim to develop more human-like models and achieve a deeper understanding of human language use. 
-From this perspective, I approach pragmatic phenomena through behavioral experiments, computational modeling and linguistic data analysis.
-<br><br>
-In addition, I actively engage in interdisciplinary research by applying NLP techniques to other fields such as language learning and the social sciences.
-    </p>
-  </section>
+   Prof. Hanjung Lee</a>,  in the Language and Cognition Lab.</p><p>My research lies at the intersection of linguistics and NLP.
+By focusing on how AI language models process language in comparison to humans, I aim to develop more human-like models and achieve a deeper understanding of human language use.
+From this perspective, I approach pragmatic phenomena through behavioral experiments, computational modeling and linguistic data analysis.</p><p>In addition, I actively engage in interdisciplinary research by applying NLP techniques to other fields such as language learning and the social sciences.</p></div></section>
+    <section id="interest" class="section-grid"><div class="section-label"><h2>Research Interests</h2></div><ul class="interest-list"><li>Experimental linguistics</li><li>Computational linguistics</li><li>Human-AI Interaction</li><li>Natural language processing</li></ul></section>
+    <section id="links" class="section-grid links-section"><div class="section-label"><h2>Links</h2></div><div class="social-links">
 
-  <section id="interest">
-    <h2>Research Interests</h2>
-      <ul>
-      <li>Experimental linguistics</li>
-      <li>Computational linguistics</li>
-      <li>Human-AI Interaction</li>
-      <li>Natural language processing</li>
-  </ul>
-  </section>
-
-
-
-<section id="links">
-  <h2>Links</h2>
   <p>
-    <a href="mailto:choyeeun@chungbuk.ac.kr" class="icon-link">
+    <a href="mailto:choyeeun@chungbuk.ac.kr" class="icon-link" aria-label="Email">
       <i class="fas fa-envelope"></i>
     </a>
 
     <a href="https://github.com/joyennn"
      target="_blank" rel="noopener noreferrer"
-     class="icon-link">
+     class="icon-link" aria-label="GitHub">
       <i class="fab fa-github"></i>
     </a>
 
-    <a href="https://www.linkedin.com/in/joyenn" 
-       target="_blank" rel="noopener noreferrer" 
-       class="icon-link">
+    <a href="https://www.linkedin.com/in/joyenn"
+       target="_blank" rel="noopener noreferrer"
+       class="icon-link" aria-label="LinkedIn">
       <i class="fab fa-linkedin"></i>
     </a>
 
-    <a href="https://scholar.google.co.kr/citations?user=vqbifI0AAAAJ&hl" 
-       target="_blank" rel="noopener noreferrer" 
-       class="icon-link">
+    <a href="https://scholar.google.co.kr/citations?user=vqbifI0AAAAJ&hl"
+       target="_blank" rel="noopener noreferrer"
+       class="icon-link" aria-label="Google Scholar">
       <i class="fas fa-graduation-cap"></i>
     </a>
   </p>
-</section>
-
-
-  <footer>
-    <p>&copy; 2025 Ye-eun Cho. Built with HTML & CSS | Hosted on GitHub Pages</p>
-  </footer>
+</div></section>
+</main>
+  <footer class="site-footer wrap"><p>&copy; 2026 Ye-eun Cho. Built with HTML &amp; CSS | Hosted on GitHub Pages</p></footer>
 </body>
 </html>

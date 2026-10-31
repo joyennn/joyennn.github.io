@@ -1,167 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ye-eun Cho</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-    }
-
-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 1.5em 1em;
-  text-align: center;
-}
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      font-size: 1.1em;
-      margin-top: 0.5em;
-    }
-
-    nav {
-      background-color: #34495e;
-      padding: 0.8em 0;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1.2em;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3em;
-      margin-top: 2em;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5em;
-    }
-
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2em 0;
-      background-color: #ecf0f1;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    .link-button {
-    display: inline-block;
-    background-color: #007acc;
-    color: white;
-    padding: 1px 10px;
-    margin-right: 1px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    }
-    .link-button:hover {
-    background-color: #005f99;
-    }
-
-    .tool-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.5em;
-}
-
-.tool-item img {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 1em;
-}
-
-.tool-info p {
-  margin: 0;
-}
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ye-eun Cho — Postdoctoral Researcher at Chungbuk National University. Research in linguistics, natural language processing, and human–AI interaction.">
+  <meta name="theme-color" content="#f8f7f3">
+  <title>Ye-eun Cho | Tools</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <h1>Ye-eun Cho</h1>
-    <p>Postdoctoral Researcher at CBNU</p>
+<body class="inner-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <div class="identity"><h1>Ye-eun Cho</h1><p>Postdoctoral Researcher at CBNU</p></div>
+    <nav aria-label="Main navigation"><a href="index.html">About</a><a href="research.html">Research</a><a href="tools.html" aria-current="page">Tools</a><a href="cv.html">CV</a></nav>
   </header>
-
-  <nav>
-    <a href="index.html">About</a>
-    <a href="research.html">Research</a>
-    <a href="tools.html">Tools</a>
-    <a href="cv.html">CV</a>
-  </nav>
-
-  <section id="publications">
-  <h2>Tools</h2>
-
-<!--
+  <main id="main" class="wrap"><section class="page-heading"><h2>Tools</h2></section><!--
   <h3>CLIL Classroom</h3>
   <div class="tool-item">
     <img src="tool_img/teacher.jpg" alt="CLIL Classroom image">
     <div class="tool-info">
       <p>
-        A simulated classroom environment for Content and Language Integrated Learning (CLIL). 
+        A simulated classroom environment for Content and Language Integrated Learning (CLIL).
         <a href="https://clil-classroom.onrender.com/" class="link-button" target="_blank">Link</a>
       </p>
     </div>
   </div>
-   
+
   <h3>DP-GPT</h3>
   <div class="tool-item">
     <img src="tool_img/dp_gpt.jpg" alt="DP-GPT image">
     <div class="tool-info">
       <p>
         A Sentence Extraction Module Integrating Dependency Parser and Large Language Model<br>
-        This tool turns natural language commands into code to filter sentences based on dependency structures. 
+        This tool turns natural language commands into code to filter sentences based on dependency structures.
         <a href="https://github.com/joyennn/dp_gpt" class="link-button" target="_blank">Link</a>
       </p>
     </div>
   </div>
-  -->
-
-
-
-  <footer>
-    <p>&copy; 2025 Ye-eun Cho. Built with HTML & CSS | Hosted on GitHub Pages</p>
-  </footer>
+  --></main>
+  <footer class="site-footer wrap"><p>&copy; 2026 Ye-eun Cho. Built with HTML &amp; CSS | Hosted on GitHub Pages</p></footer>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <title>SEEK — Download and documentation</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="config.js"></script>
+  <script defer src="config.js?v=0.5.2"></script>
   <script defer src="site.js"></script>
 </head>
 <body id="top">
@@ -24,7 +24,7 @@
     <div><p class="full-name">Sentence Exploration and Extraction Kit</p><p>Desktop software for linguistic sentence extraction. Import text, inspect dependency parses, describe search conditions in natural language, and export matching sentences.</p><p class="technical-note">Stanza language selection · Local GPU with CPU fallback · Large-corpus processing</p></div>
   </section>
   <section class="downloads" id="download" aria-labelledby="download-title">
-    <div class="download-heading"><h2 id="download-title">Download</h2><span class="version">v<span data-version>0.5.1</span> · Developer preview</span></div>
+    <div class="download-heading"><h2 id="download-title">Download</h2><span class="version">v<span data-version>0.5.2</span> · Developer preview</span></div>
     <div class="download-grid">
       <article class="download-card"><h2>macOS</h2><p class="requirements">Apple Silicon · macOS 13+</p><a class="download-button" id="download-mac">Download for Mac <span aria-hidden="true">↓</span></a><div class="file-meta"><span>DMG · <span data-file-size="mac">121 MB</span></span><a href="#install-mac">Install instructions</a></div></article>
       <article class="download-card"><h2>Windows</h2><p class="requirements">x64 · Windows 10 (1809+) / 11</p><a class="download-button" id="download-windows">Download for Windows <span aria-hidden="true">↓</span></a><div class="file-meta"><span><span id="windows-file-format">EXE</span> · <span data-file-size="windows">123 MB</span></span><a href="#install-windows">Install instructions</a></div></article>
@@ -42,7 +42,7 @@
     <h2 id="usage-title">Usage</h2>
     <div><ol class="usage-steps">
       <li><strong>Add data.</strong> Select the corpus language, then paste text, choose a TXT file, or load CoNLL-U annotations.</li>
-      <li><strong>Parse.</strong> Use Automatic to select a compatible GPU or CPU. Inspect the dependency graph and save CoNLL-U annotations for reuse. Pause and resume processing from saved batches.</li>
+      <li><strong>Parse.</strong> Use Automatic to select a compatible GPU or CPU. Inspect dependency graphs or token tables. Enter a corpus sentence number and select Go to jump to any saved sentence. Save CoNLL-U annotations for reuse. Pause and resume processing from saved batches.</li>
       <li><strong>Build conditions.</strong> Enter your OpenAI API key in <em>Connect AI</em>. Describe the target construction and select <em>Build conditions with AI</em>.</li>
       <li><strong>Search and export.</strong> Review and confirm the interpreted conditions, then select <em>Run search</em>. Export matching sentences as TXT or CSV.</li>
     </ol><a class="sample-link" href="assets/seek-sample.conllu" download>Download sample annotations (.conllu) <span aria-hidden="true">↓</span></a>
@@ -52,7 +52,7 @@
     <h2 id="demo-title">Demo video</h2>
     <div><div class="video-space" id="demo-media"><p id="demo-status">Video coming soon.</p></div></div>
   </section>
-  <footer><span>SEEK · v<span data-version>0.5.1</span></span><a href="#download">Back to downloads ↑</a></footer>
+  <footer><span>SEEK · v<span data-version>0.5.2</span></span><a href="#download">Back to downloads ↑</a></footer>
   <noscript><p>Enable JavaScript to load download links.</p></noscript>
 <dialog id="windows-download-dialog" aria-labelledby="windows-download-title"><div class="download-dialog-head"><h2 id="windows-download-title">Windows installation files</h2><button type="button" id="close-windows-download" aria-label="Close">×</button></div><p>Download all files into the same folder. Then run the EXE installer.</p><div id="windows-installer-files"></div><p class="technical-note">Keep the BIN data files beside the EXE until installation is complete.</p></dialog>
 </main>

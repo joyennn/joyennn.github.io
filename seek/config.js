@@ -1,35 +1,35 @@
 window.SEEK_SITE = {
-  "version": "0.5.0",
-  "releaseBaseUrl": "https://github.com/joyennn/joyennn.github.io/releases/download/seek-v0.5.0",
+  "version": "0.5.1",
+  "releaseBaseUrl": "https://github.com/joyennn/joyennn.github.io/releases/download/seek-v0.5.1",
   "toolsUrl": "../tools.html",
   "demoVideoUrl": "",
   "files": {
-    "mac": "SEEK-0.5.0-macos-arm64.dmg",
-    "windows": "SEEK-0.5.0-windows-x64-installer.exe"
+    "mac": "SEEK-0.5.1-macos-arm64.dmg",
+    "windows": "SEEK-0.5.1-windows-x64-installer.exe"
   },
   "sizes": {
-    "mac": 129681062,
-    "windows": 3028266342
+    "mac": 129502141,
+    "windows": 3028269596
   },
   "sha256": {
-    "mac": "a155857e8ee5f4d2d24a2a7c1a36c3ada5695c54c897419212232180100fa098",
-    "windows": "5554262f1b29fd9acfa9b05ee39b67c61d2a8d42ef949b93eed79fe778a90092"
+    "mac": "a6f3e32f15df9eab226b7acc0711c3787883ba7108b72142b50f63083e20edd2",
+    "windows": "3113a4dbe59d4c81e09da5b4dc446ee68550037e85b0ee9ee9aa39715489e5c7"
   },
   "windowsFiles": [
     {
-      "filename": "SEEK-0.5.0-windows-x64-installer.exe",
-      "size_bytes": 2326345,
-      "sha256": "5554262f1b29fd9acfa9b05ee39b67c61d2a8d42ef949b93eed79fe778a90092"
+      "filename": "SEEK-0.5.1-windows-x64-installer.exe",
+      "size_bytes": 2326344,
+      "sha256": "3113a4dbe59d4c81e09da5b4dc446ee68550037e85b0ee9ee9aa39715489e5c7"
     },
     {
-      "filename": "SEEK-0.5.0-windows-x64-installer-1.bin",
+      "filename": "SEEK-0.5.1-windows-x64-installer-1.bin",
       "size_bytes": 1797673472,
-      "sha256": "d317305300d5fa5b20e4e314b1dc2e9248a11864779a8f604432505a6e7a3070"
+      "sha256": "af041bd885ebb0373fc74c1e33e9125419f5fc3b90b1aa6eb809e4574f4ac2ac"
     },
     {
-      "filename": "SEEK-0.5.0-windows-x64-installer-2.bin",
-      "size_bytes": 1228266525,
-      "sha256": "da18d3c2f4fd0335c92b0825b3e44d748ecf3b3c0c758e32953e09dd61194cd5"
+      "filename": "SEEK-0.5.1-windows-x64-installer-2.bin",
+      "size_bytes": 1228269780,
+      "sha256": "55bb20573de16fe710bc4d1525452864068eda4181a4beb4d1a185682de870c0"
     }
   ]
 };

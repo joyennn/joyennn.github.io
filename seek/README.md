@@ -8,7 +8,7 @@ The personal website's Tools page links here through `seek/`. The breadcrumb lin
 
 Installer assets are stored in this repository's GitHub Releases, separately from Pages source. `config.js` specifies the current release, filenames, sizes and SHA-256 hashes. Windows requires the EXE and both BIN files in one folder. Parsing runs on the user's computer; selected language models download on first use. Generating new AI conditions uses the user's own OpenAI API key and billing.
 
-Current release: https://github.com/joyennn/joyennn.github.io/releases/tag/seek-v0.5.0
+Current release: https://github.com/joyennn/joyennn.github.io/releases/tag/seek-v0.5.1
 
 ## Updating
 
@@ -18,3 +18,5 @@ Current release: https://github.com/joyennn/joyennn.github.io/releases/tag/seek-
 4. Verify public links and commit the page update. Do not commit installers or API keys.
 
 The ignored `downloads` path is only for local preview. It must not be committed. The optional `demoVideoUrl` in `config.js` enables a video player; while unset, the page displays “Video coming soon”.
+
+Version 0.5.1 adds persistent upload confirmation, file details, transfer progress and cancellation, and separate error feedback. Existing parsing and storage behavior is unchanged.

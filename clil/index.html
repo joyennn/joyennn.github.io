@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.anthropic.com https://api.openai.com https://generativelanguage.googleapis.com; img-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="수업 환경과 학생별 언어 능력, 교과 이해를 직접 설정하는 CLIL 교실 시뮬레이터">
+  <title>CLIL Studio · 나만의 교실 만들기</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./i18n.js?v=0.7.1" defer></script>
+  <script src="./export.js?v=0.7.1" defer></script>
+  <script src="./cefr.js" defer></script>
+  <script src="./solo.js" defer></script>
+  <script src="./models.js?v=0.7.1" defer></script>
+  <script src="./prompt.js?v=browser-1" defer></script>
+  <script src="./runtime.js?v=browser-1" defer></script>
+  <script src="./app.js?v=0.7.1" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="CLIL Studio 처음으로"><span class="brand-icon">c<span>l</span></span><span>CLIL <b>Studio</b><small>작은 설정으로, 다양한 교실을.</small></span></a>
+    <div class="header-actions"><label class="language-switch"><span>Language</span><select id="uiLanguage" aria-label="Language" title="수업 언어와 독립적인 화면 언어입니다."><option value="en">English</option><option value="ko" data-user-content>한국어</option></select></label><a class="text-button" href="../tools" aria-label="Research tools">Tools ↗</a><span class="local-badge"><i></i> 나의 수업 공간</span><button class="text-button" id="importBtn">설정 불러오기</button><button class="outlined small" id="exportConfigBtn">설정 내보내기 <span aria-hidden="true">↗</span></button></div>
+    <input type="file" accept=".json,application/json" id="importFile" hidden>
+  </header>
+
+  <main>
+    <nav class="steps" aria-label="교실 만들기 단계">
+      <button class="step active" data-step="1" aria-current="step"><span>01</span> 수업 환경</button><div class="step-line"></div>
+      <button class="step" data-step="2"><span>02</span> 학생 만들기</button><div class="step-line"></div>
+      <button class="step" data-step="3"><span>03</span> 교실 대화</button>
+    </nav>
+
+    <section id="stage1" class="stage">
+      <div class="intro"><p class="eyebrow">BUILD YOUR CLASSROOM</p><h1>어떤 교실을<br>만들어 볼까요<span>?</span></h1><p class="lead">수업 언어와 주제를 정하고, 서로 다른 능력을 가진<br class="desktop"> 학생들을 초대해 보세요.</p></div>
+      <div class="environment-layout">
+        <div class="panel environment-panel">
+          <div class="section-heading"><span class="section-icon">↗</span><div><h2>수업의 기본 설정</h2><p>언어와 교과 내용은 각각 설정할 수 있어요.</p></div></div>
+          <div class="form-grid">
+            <label class="full">수업 이름<input id="classTitle" maxlength="120" placeholder="예: 우리 반의 첫 곱셈 수업"></label>
+            <label>수업·목표 언어<select id="targetLanguage"><option value="한국어">한국어</option><option value="English">English</option><option value="日本語">日本語</option><option value="中文">中文</option><option value="custom">직접 입력</option></select></label>
+            <label>학년<select id="classGrade"></select></label>
+            <label class="full" id="customLanguageWrap" hidden>직접 입력한 언어<input id="customLanguage" maxlength="60" placeholder="예: Español"></label>
+            <label>교과<select id="classSubject"><option value="수학">수학</option><option value="과학">과학</option><option value="국어">국어</option><option value="통합교과">통합교과</option><option value="custom">직접 입력</option></select></label>
+            <label id="customSubjectWrap" hidden>직접 입력한 교과<input id="customSubject" maxlength="80" placeholder="교과 이름"></label>
+            <label class="full">오늘의 주제<input id="classLesson" maxlength="500" placeholder="이번 수업의 주제를 입력하세요"></label>
+            <label class="full">학습 내용 <span class="label-note">선택 입력</span><input id="classConcepts" maxlength="120" placeholder="이번 수업에서 다룰 학습 내용을 입력하세요"><small>학생마다 이 학습 내용에 대한 SOLO 수준을 하나 설정합니다.</small></label>
+          </div>
+        </div>
+        <aside class="classroom-preview">
+          <div class="preview-label"><span class="live-dot"></span> CLASSROOM PREVIEW</div>
+          <div class="classroom-illustration" aria-hidden="true"><div class="board"><span>오늘의 발견</span><div>1 + 1 + 1 = <b>?</b></div><i>함께 생각해 보기</i></div><div class="little-people"><span style="--person:#e5ad79"></span><span style="--person:#b5bbec"></span><span style="--person:#83bfb2"></span><span style="--person:#e9a4b2"></span></div><div class="desk"></div></div>
+          <h2>모두 다른 학생들,<br>하나의 교실.</h2><p>나이, 언어 경험, 표현 능력과<br>개념 이해를 학생마다 다르게 설정하세요.</p>
+          <div class="student-count"><label for="studentCount">함께할 학생 수</label><div class="number-control"><button id="countDown" aria-label="학생 수 줄이기">−</button><input type="number" id="studentCount" min="1" max="30" value="4" aria-label="학생 수"><button id="countUp" aria-label="학생 수 늘리기">+</button></div><small>1명부터 30명까지</small></div>
+          <button class="primary wide" id="toStudents">학생 설정하기 <span>→</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="stage2" class="stage" hidden>
+      <div class="page-heading"><div><p class="eyebrow">MEET YOUR STUDENTS</p><h1>우리 반을 소개합니다<span>.</span></h1><p class="lead">학생 카드를 선택해 각자의 배경과 능력을 설정하세요.</p></div><button class="outlined" id="backEnvironment">← 수업 환경</button></div>
+      <div class="roster-layout"><aside class="roster-sidebar"><div class="roster-title"><h2>학생 명단</h2><span id="rosterCount"></span></div><div id="studentList" class="student-list"></div><div class="sidebar-tip">언어 능력과 교과 이해는<br>독립적으로 조절할 수 있어요.</div></aside>
+        <div id="studentEditor" class="panel editor"></div>
+      </div>
+      <div class="bottom-actions"><span class="muted" id="profileStatus"></span><button class="primary" id="startClass">이 학생들과 대화하기 <span>→</span></button></div>
+    </section>
+
+    <section id="stage3" class="stage" hidden>
+      <div class="page-heading chat-page-heading"><div><p class="eyebrow">YOUR CLASSROOM IS READY</p><h1 id="chatTitle"></h1><p class="lead" id="chatSubtitle"></p></div><button class="outlined" id="editClass">학생·환경 수정</button></div>
+      <div class="chat-layout"><aside class="panel chat-sidebar"><h2>함께하는 학생</h2><p class="muted">선택하면 해당 학생이 답해요.<br>이름으로 지명하면 해당 학생만, 일반 질문에는 1~2명이 답합니다. 전체에게 답을 요청할 때만 여러 명이 답합니다.</p><div id="chatRoster"></div><button class="text-button" id="clearResponders">응답 학생 선택 해제</button><div class="sidebar-tip">설정된 기본 능력과 개념 상태는 이 대화에서 유지됩니다. 제공한 도움은 현재 과제에 활용합니다.</div></aside>
+        <div class="chat-main"><div class="panel connection-panel"><div class="mode-control"><button id="demoMode" class="mode" aria-pressed="false">화면 미리보기</button><button id="liveMode" class="mode active" aria-pressed="true">실제 AI 대화</button><span id="modeBadge" class="mode-badge">예시 응답</span></div><p id="modeDescription">고정된 예시 응답으로 화면 흐름만 확인합니다. 질문·교과 이해를 반영한 AI 응답이 아닙니다.</p><div id="liveSettings" class="form-grid">
+<label for="providerPreset">제공사<select id="providerPreset"><option value="anthropic">Anthropic</option><option value="openai">OpenAI</option><option value="google">Google</option></select></label>
+<div class="model-picker"><label for="modelPreset">모델</label><select id="modelPreset"></select><input type="hidden" id="modelName"><small id="modelIdDisplay"></small><small>모델 이용 가능 여부는 API 계정 권한에 따라 다릅니다.</small></div>
+<label class="full"><span id="apiKeyLabel">Anthropic API key</span><input type="password" id="apiKey" autocomplete="off" placeholder="sk-ant-…"><small id="apiKeyHint"></small><small><a id="apiKeyLink" href="https://platform.claude.com/settings/keys" target="_blank" rel="noopener noreferrer">API 키 발급 페이지</a></small></label>
+</div></div>
+          <div class="panel conversation-panel"><div class="conversation-toolbar"><span><i class="live-dot"></i> 교실 대화</span><div><button class="text-button" id="newChat">새 대화</button><button class="text-button" id="exportChat">대화 저장 ↗</button></div></div><div id="conversation" class="conversation" role="log" aria-live="polite"></div><form id="chatForm" class="composer"><label class="sr-only" for="teacherMessage">교사 메시지</label><textarea id="teacherMessage" rows="2" maxlength="12000" placeholder="학생들에게 말을 걸어 보세요. 예: 두 개씩 세 묶음이면 모두 몇 개일까요?"></textarea><div class="composer-bottom"><span>Enter 전송 · Shift + Enter 줄바꿈</span><button class="primary small" id="sendMessage" type="submit">보내기 ↑</button></div></form><div id="chatError" class="inline-error" role="alert" hidden></div></div>
+        </div>
+      </div>
+    </section>
+    <footer><span>CLIL Studio</span><p>학생의 가능성을, 더 구체적으로 상상하는 공간.</p><span>브라우저 직접 실행 시험판 · v0.7.1-browser.1</span></footer>
+  </main>
+  <dialog id="saveDialog" aria-labelledby="saveHeading"><h2 id="saveHeading">대화 내보내기</h2><p>원하는 형식을 선택하면 이 브라우저에서 파일 다운로드를 요청합니다. 저장 위치는 브라우저 설정에 따라 달라집니다.</p><p>JSON은 전체 설정과 대화, CSV는 분석용 표입니다. API 키는 포함하지 않습니다.</p><label for="savedContent">내보낼 내용 · JSON</label><textarea id="savedContent" readonly rows="10"></textarea><p id="saveCopyStatus" role="status"></p><div class="save-actions"><button class="outlined" id="copySaved">내용 복사</button><button class="outlined" id="downloadSaved">JSON 다운로드</button><button class="outlined" id="downloadCsv">대화 CSV 다운로드</button><button class="outlined" id="downloadProfiles">학생 설정 CSV 다운로드</button><button class="primary" id="closeSaved">닫기</button></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

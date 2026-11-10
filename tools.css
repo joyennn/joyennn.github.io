@@ -1,0 +1,14 @@
+/* Compact, repeatable rows for the personal homepage Tools collection. */
+.tools-main{min-height:calc(100vh - 252px)}
+.tools-list{margin:0 0 42px}
+.research-tool{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:36px;align-items:center;padding:24px 28px 26px;background:#fff;border:1px solid var(--line);border-radius:5px;margin-bottom:16px}
+.tool-title-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 16px}
+.tool-description h3{font-size:23px;line-height:1.35;letter-spacing:.2px;font-weight:600;color:var(--green);margin:0}
+.tool-full-name{font-size:14px;line-height:1.6;color:var(--ink);margin:0}
+.tool-summary{font-size:14px;line-height:1.85;color:#515a54;margin:11px 0 9px;max-width:790px}
+.tool-platforms{font-size:12px;line-height:1.6;color:var(--muted);margin:0;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.tool-primary{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:44px;padding:8px 14px;border:1px solid var(--green);border-radius:3px;background:var(--green);color:#fff;font-size:12px;text-decoration:none;line-height:1.6;white-space:nowrap}
+.tool-primary:hover{background:#1f4336;border-color:#1f4336;color:#fff}
+.tool-primary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){.research-tool{gap:24px}.tool-title-line{display:block}.tool-full-name{margin-top:4px;font-size:13px}}
+@media(max-width:600px){.research-tool{grid-template-columns:1fr;gap:17px;padding:22px 20px 24px}.tool-primary{justify-self:start}.tool-summary{font-size:13px;margin:10px 0}.tool-description h3{font-size:22px}.tools-main{min-height:55vh}}

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ye-eun Cho — Postdoctoral Researcher at Chungbuk National University. Research in linguistics, natural language processing, and human–AI interaction.">
+  <meta name="description" content="Research software by Ye-eun Cho. SEEK extracts corpus sentences using natural-language conditions and dependency annotations.">
   <meta name="theme-color" content="#f8f7f3">
   <title>Ye-eun Cho | Tools</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tools.css">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -14,30 +15,19 @@
     <div class="identity"><h1>Ye-eun Cho</h1><p>Postdoctoral Researcher at CBNU</p></div>
     <nav aria-label="Main navigation"><a href="index.html">About</a><a href="research.html">Research</a><a href="tools.html" aria-current="page">Tools</a><a href="cv.html">CV</a></nav>
   </header>
-  <main id="main" class="wrap"><section class="page-heading"><h2>Tools</h2></section><!--
-  <h3>CLIL Classroom</h3>
-  <div class="tool-item">
-    <img src="tool_img/teacher.jpg" alt="CLIL Classroom image">
-    <div class="tool-info">
-      <p>
-        A simulated classroom environment for Content and Language Integrated Learning (CLIL).
-        <a href="https://clil-classroom.onrender.com/" class="link-button" target="_blank">Link</a>
-      </p>
-    </div>
-  </div>
-
-  <h3>DP-GPT</h3>
-  <div class="tool-item">
-    <img src="tool_img/dp_gpt.jpg" alt="DP-GPT image">
-    <div class="tool-info">
-      <p>
-        A Sentence Extraction Module Integrating Dependency Parser and Large Language Model<br>
-        This tool turns natural language commands into code to filter sentences based on dependency structures.
-        <a href="https://github.com/joyennn/dp_gpt" class="link-button" target="_blank">Link</a>
-      </p>
-    </div>
-  </div>
-  --></main>
+  <main id="main" class="wrap tools-main">
+    <section class="page-heading"><h2>Tools</h2></section>
+    <section class="tools-list" aria-label="Research tools">
+      <article class="research-tool" aria-labelledby="seek-title">
+        <div class="tool-description">
+          <div class="tool-title-line"><h3 id="seek-title">SEEK</h3><p class="tool-full-name">Sentence Exploration and Extraction Kit</p></div>
+          <p class="tool-summary">Extract sentences from your own corpus using natural-language conditions. Import raw text or saved annotations, inspect dependency parses, and export the matching sentences.</p>
+          <p class="tool-platforms">macOS &amp; Windows <span aria-hidden="true">·</span> Local processing</p>
+        </div>
+        <a class="tool-primary" href="seek/">About &amp; download <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </article>
+    </section>
+  </main>
   <footer class="site-footer wrap"><p>&copy; 2026 Ye-eun Cho. Built with HTML &amp; CSS | Hosted on GitHub Pages</p></footer>
 </body>
 </html>

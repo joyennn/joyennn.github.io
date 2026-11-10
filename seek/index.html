@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download SEEK — Sentence Exploration and Extraction Kit. Desktop software for parsing corpora and extracting sentences with linguistic conditions.">
+  <meta name="theme-color" content="#285848">
+  <title>SEEK — Download and documentation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="config.js"></script>
+  <script defer src="site.js"></script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+  <a class="wordmark" href="#top" aria-label="SEEK home">SEEK</a>
+  <div class="breadcrumb"><span id="tools-home">Tools</span><span aria-hidden="true">/</span><span>SEEK</span></div>
+  <nav aria-label="Page navigation"><a href="#installation">Installation</a><a href="#usage">Usage</a><a href="#demo">Demo</a></nav>
+</div></header>
+<main id="main" class="page-width">
+  <section class="overview content-section" id="overview" aria-labelledby="overview-title">
+    <h1 id="overview-title">About SEEK</h1>
+    <div><p class="full-name">Sentence Exploration and Extraction Kit</p><p>Desktop software for linguistic sentence extraction. Import text, inspect dependency parses, describe search conditions in natural language, and export matching sentences.</p><p class="technical-note">Stanza language selection · Local GPU with CPU fallback · Large-corpus processing</p></div>
+  </section>
+  <section class="downloads" id="download" aria-labelledby="download-title">
+    <div class="download-heading"><h2 id="download-title">Download</h2><span class="version">v<span data-version>0.5.0</span> · Developer preview</span></div>
+    <div class="download-grid">
+      <article class="download-card"><h2>macOS</h2><p class="requirements">Apple Silicon · macOS 13+</p><a class="download-button" id="download-mac">Download for Mac <span aria-hidden="true">↓</span></a><div class="file-meta"><span>DMG · <span data-file-size="mac">121 MB</span></span><a href="#install-mac">Install instructions</a></div></article>
+      <article class="download-card"><h2>Windows</h2><p class="requirements">x64 · Windows 10 (1809+) / 11</p><a class="download-button" id="download-windows">Download for Windows <span aria-hidden="true">↓</span></a><div class="file-meta"><span><span id="windows-file-format">EXE</span> · <span data-file-size="windows">123 MB</span></span><a href="#install-windows">Install instructions</a></div></article>
+    </div>
+    <p class="availability" id="download-availability" role="status" hidden></p>
+  </section>
+  <section class="content-section" id="installation" aria-labelledby="installation-title">
+    <h2 id="installation-title">Installation</h2>
+    <div><div class="install-grid">
+      <article id="install-mac"><h3>macOS</h3><ol><li>Open the downloaded <code>.dmg</code> file.</li><li>Drag <strong>SEEK.app</strong> to <strong>Applications</strong>.</li><li>Open SEEK.</li></ol></article>
+      <article id="install-windows"><h3>Windows</h3><ol><li>Save the EXE and both BIN files in the same folder.</li><li>Run the EXE installer and follow the setup steps.</li><li>Open SEEK from the Start menu.</li></ol></article>
+    </div><p class="technical-note">The Mac preview is not Apple-notarized; the Windows installer is unsigned. Windows uses Microsoft WebView2.</p><p class="technical-note">Selected language models download on first use. GPU: Apple MPS on Mac; compatible NVIDIA CUDA on Windows, with CPU fallback.</p></div>
+  </section>
+  <section class="content-section" id="usage" aria-labelledby="usage-title">
+    <h2 id="usage-title">Usage</h2>
+    <div><ol class="usage-steps">
+      <li><strong>Add data.</strong> Select the corpus language, then paste text, choose a TXT file, or load CoNLL-U annotations.</li>
+      <li><strong>Parse.</strong> Use Automatic to select a compatible GPU or CPU. Inspect the dependency graph and save CoNLL-U annotations for reuse. Pause and resume processing from saved batches.</li>
+      <li><strong>Build conditions.</strong> Enter your OpenAI API key in <em>Connect AI</em>. Describe the target construction and select <em>Build conditions with AI</em>.</li>
+      <li><strong>Search and export.</strong> Review and confirm the interpreted conditions, then select <em>Run search</em>. Export matching sentences as TXT or CSV.</li>
+    </ol><a class="sample-link" href="assets/seek-sample.conllu" download>Download sample annotations (.conllu) <span aria-hidden="true">↓</span></a>
+    <div class="usage-notes"><p><strong>Large corpora:</strong> No corpus sentence or file-size cap. Files are processed in batches and saved locally. Screen pagination does not limit search or exports. Available disk and hardware resources determine capacity. Oversized or malformed individual passages require review.</p><p><strong>API usage:</strong> New AI-generated conditions use your own API key and billing. Parsing and running saved conditions require no API call. ChatGPT login does not supply an API key.</p><p><strong>Data:</strong> Parsing and search run locally. Only the construction description, query schema, and corpus language are sent to OpenAI. The API key is cleared when the interface reloads.</p><p><strong>Review:</strong> Check parser output and AI interpretations. Structural matches may require further linguistic judgment.</p></div></div>
+  </section>
+  <section class="content-section" id="demo" aria-labelledby="demo-title">
+    <h2 id="demo-title">Demo video</h2>
+    <div><div class="video-space" id="demo-media"><p id="demo-status">Video coming soon.</p></div></div>
+  </section>
+  <footer><span>SEEK · v<span data-version>0.5.0</span></span><a href="#download">Back to downloads ↑</a></footer>
+  <noscript><p>Enable JavaScript to load download links.</p></noscript>
+<dialog id="windows-download-dialog" aria-labelledby="windows-download-title"><div class="download-dialog-head"><h2 id="windows-download-title">Windows installation files</h2><button type="button" id="close-windows-download" aria-label="Close">×</button></div><p>Download all files into the same folder. Then run the EXE installer.</p><div id="windows-installer-files"></div><p class="technical-note">Keep the BIN data files beside the EXE until installation is complete.</p></dialog>
+</main>
+</body>
+</html>

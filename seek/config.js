@@ -2,7 +2,8 @@ window.SEEK_SITE = {
   "version": "0.5.2",
   "releaseBaseUrl": "https://github.com/joyennn/joyennn.github.io/releases/download/seek-v0.5.2",
   "toolsUrl": "../tools.html",
-  "demoVideoUrl": "",
+  "demoVideoUrl": "assets/seek-demo-0.5.2.mp4",
+  "demoPosterUrl": "assets/seek-demo-0.5.2-poster.jpg",
   "files": {
     "mac": "SEEK-0.5.2-macos-arm64.dmg",
     "windows": "SEEK-0.5.2-windows-x64-installer.exe"

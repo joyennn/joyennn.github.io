@@ -52,7 +52,9 @@
   const videoUrl = safeUrl(config.demoVideoUrl);
   if (videoUrl) {
     const video = document.createElement('video');
-    video.controls = true; video.playsInline = true; video.preload = 'none'; video.src = videoUrl;
+    video.controls = true; video.playsInline = true; video.preload = 'metadata'; video.src = videoUrl;
+    const posterUrl = safeUrl(config.demoPosterUrl);
+    if (posterUrl) video.poster = posterUrl;
     video.setAttribute('aria-label', 'SEEK demonstration video');
     document.getElementById('demo-media').replaceChildren(video);
   }

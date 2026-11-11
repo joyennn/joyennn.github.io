@@ -22,3 +22,5 @@ The ignored `downloads` path is only for local preview. It must not be committed
 Version 0.5.1 adds persistent upload confirmation, file details, transfer progress and cancellation, and separate error feedback. Existing parsing and storage behavior is unchanged.
 
 Version 0.5.2 adds direct navigation to any saved sentence by its corpus ordinal, including sentences beyond the current display page. Graph/table mode is preserved.
+
+The final 1:54 demo video is served from `assets/seek-demo-0.5.2.mp4` through GitHub Pages. `config.js` also sets a poster image. The video contains its English narration and subtitles; no separate subtitle file is required for playback. The player uses native controls, inline playback and metadata preload.

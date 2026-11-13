@@ -12,7 +12,7 @@
   }
   const local = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
   const base = config.releaseBaseUrl ? safeUrl(config.releaseBaseUrl.replace(/\/+$/, '') + '/') : local ? new URL('downloads/', location.href).href : null;
-  for (const platform of ['mac', 'windows']) {
+  for (const platform of ['mac', 'mac-intel', 'windows']) {
     const link = document.getElementById('download-' + platform);
     const filename = config.files?.[platform];
     if (base && filename && /^[A-Za-z0-9._-]+$/.test(filename)) {

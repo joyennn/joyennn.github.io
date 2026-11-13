@@ -6,14 +6,17 @@ window.SEEK_SITE = {
   "demoPosterUrl": "assets/seek-demo-0.5.2-poster.jpg",
   "files": {
     "mac": "SEEK-0.5.2-macos-arm64.dmg",
+    "mac-intel": "SEEK-0.5.2-macos-x86_64.dmg",
     "windows": "SEEK-0.5.2-windows-x64-installer.exe"
   },
   "sizes": {
     "mac": 129725872,
+    "mac-intel": 242135071,
     "windows": 3028275635
   },
   "sha256": {
     "mac": "af666bf7c830f1ec86e1a573e617fa374f62541fe01e01962b0ae5ae9ed3f626",
+    "mac-intel": "cff586058b9cf3cd0ffd5ae339a77c4ce969e7587e9769360d2a986b324c3db4",
     "windows": "41dc3ef6c58cf0b0f21541259217e052d4efd02c65f9624fb585563a83e45edb"
   },
   "windowsFiles": [
